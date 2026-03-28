@@ -1,0 +1,14 @@
+node_modules/
+bun.lockb
+store-test/
+jd.md
+resume_zhangsan.md
+result_zhangsan.json
+
+# Store data is local — only keep structure, not content
+store/sources/*.json
+store/notes/*.json
+store/projects/*.json
+store/entities/*.json
+store/residue/*.json
+store/context-packs/*.json

@@ -1,0 +1,15 @@
+{
+  "id": "res-manual-cli-demo-succeeded-mnabyi2b",
+  "type": "residue",
+  "residueType": "lesson",
+  "title": "Manual CLI demo succeeded",
+  "body": "The isolated Node-based demo completed the main Livebase loop successfully.",
+  "importance": "medium",
+  "sourceRefs": [
+    "src-livebase-readme-mnabxvb1"
+  ],
+  "projectRef": "proj-demo-project-mnabxv7m",
+  "entityRefs": [],
+  "taskRef": "task-demo-project-mnabxvif",
+  "createdAt": "2026-03-28T12:52:31.091Z"
+}

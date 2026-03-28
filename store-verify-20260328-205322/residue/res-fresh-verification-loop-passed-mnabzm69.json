@@ -1,0 +1,15 @@
+{
+  "id": "res-fresh-verification-loop-passed-mnabzm69",
+  "type": "residue",
+  "residueType": "lesson",
+  "title": "Fresh verification loop passed",
+  "body": "A clean isolated run completed the full Livebase loop.",
+  "importance": "medium",
+  "sourceRefs": [
+    "src-livebase-readme-mnabzlv4"
+  ],
+  "projectRef": "proj-verification-project-mnabzlrc",
+  "entityRefs": [],
+  "taskRef": "task-verification-project-mnabzm2e",
+  "createdAt": "2026-03-28T12:53:23.074Z"
+}

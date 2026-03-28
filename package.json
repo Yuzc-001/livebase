@@ -1,0 +1,20 @@
+{
+  "name": "livebase",
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "init": "bun scripts/init.ts",
+    "ingest": "bun scripts/ingest.ts",
+    "retrieve": "bun scripts/retrieve.ts",
+    "pack": "bun scripts/pack.ts",
+    "writeback": "bun scripts/writeback.ts",
+    "project": "bun scripts/project.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  }
+}

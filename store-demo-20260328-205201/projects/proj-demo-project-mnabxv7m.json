@@ -1,0 +1,19 @@
+{
+  "id": "proj-demo-project-mnabxv7m",
+  "type": "project",
+  "name": "Demo Project",
+  "description": "Manual CLI demo",
+  "status": "active",
+  "sourceRefs": [
+    "src-livebase-readme-mnabxvb1"
+  ],
+  "noteRefs": [],
+  "entityRefs": [],
+  "residueRefs": [
+    "res-manual-cli-demo-succeeded-mnabyi2b"
+  ],
+  "createdAt": "2026-03-28T12:52:01.474Z",
+  "updatedAt": "2026-03-28T12:52:31.096Z",
+  "currentState": "demo loop verified manually",
+  "nextStep": "run the same flow under Bun to execute the official test suite"
+}
