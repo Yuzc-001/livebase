@@ -1,189 +1,158 @@
-# Livebase — Project Definition
-
-## Working title
-
-`Livebase`
+# Livebase - Product Definition
 
 ## One-line
 
-Livebase helps recurring real-world tasks stop restarting from zero.
+`Livebase` is a local-first work continuity engine that helps humans and agents resume real tasks from the last unresolved evidence gap instead of restarting from zero.
 
-## Core judgment
+## Core Judgment
 
-This project should not be understood as:
-- another note app
-- another personal wiki
-- another local RAG shell
-- another AI chat over files
-- another knowledge base that stops at storage
-- another AI memory project
+`Livebase` should not be framed as:
+
+- AI memory
+- local RAG
+- note vault
+- generic knowledge base
+- broad agent platform
 
 Its real center is:
 
-# help recurring real tasks continue from stronger working context instead of restarting from zero
+> durable work continuation
 
-More concretely:
+We are not trying to save more text.
+We are trying to reduce restart cost after interruption.
 
-# the context, standards, judgments, and residue produced during real work should become a durable working base for the next run
+## The Enemy
 
-## The real enemy
+The enemy is not "there is nowhere to save notes."
 
-The enemy is not “lack of a place to save notes.”
 The enemy is:
 
-# restart cost caused by working-context decay
+> the cost of re-understanding work after it pauses, hands off, or switches context
 
-That decay appears in recurring forms:
+That cost appears when:
 
-### 1. Sink
-Important material is recorded, then never returns at the right working moment.
+- the last useful judgment is detached from its supporting evidence
+- the next session gets a broad summary instead of one actionable next step
+- blocked tasks do not preserve the exact evidence gap that stopped progress
+- completed work writes back noise instead of durable leverage
 
-### 2. Fragmentation
-Projects, people, tasks, documents, standards, and past judgments stop remaining connected.
+## Product Center
 
-### 3. Drift
-Summaries, standards, and AI-generated abstractions detach from source truth.
+`Livebase` combines three layers:
 
-### 4. Retrieval unreliability
-The system returns fragments, but not dependable working context for action.
+1. knowledge base
+2. work sediment
+3. continuation engine
 
-### 5. Missing write-back
-Finished work does not improve the next cycle of work.
+### Knowledge base
 
-### 6. System rot
-Over time the base gets heavier, noisier, more duplicated, and less trustworthy.
+Stable source truth, project context, and reusable standards.
 
-## Product center
+### Work sediment
 
-The center is not storage.
-The center is not generic memory.
-The center is:
+Checkpoints, blockers, evidence gaps, and updated next actions produced during active work.
 
-# durable working context for recurring tasks
+### Continuation engine
 
-This project should help a local human-agent system do five things well:
-1. preserve source truth
-2. preserve decision standards and project context
-3. let structure grow progressively
-4. produce callable working context for action
-5. accept durable write-back after meaningful work
+The runtime that answers:
 
-## Product promise
+- what is the current task
+- what evidence gap matters most now
+- what action should happen next
+- what boundaries govern execution
+- what verified result deserves writeback
 
-If this project works, a user should feel:
-- I do not need to restart recurring work from scratch every time
-- important source material stays connected to real work
-- standards and past judgments do not vanish between tasks
-- retrieval gives me dependable working context, not fragment piles
-- my agent can work with the same durable thread I can
-- finished work strengthens the next cycle instead of disappearing into history
+The first two layers are foundations.
+The third is the product center.
 
-## Structural model
+## Product Principles
 
-`Livebase` should not collapse into either:
-- a markdown/document pile
-- or a synthetic object system with weak source grounding
+1. **Center the evidence gap**
+   Recovery starts from unresolved evidence, not from a transcript replay.
 
-Its stronger structure is:
+2. **Center the continuation pack**
+   The next run should receive the smallest trustworthy packet for action.
 
-# document layer + context layer
+3. **Center the execution contract**
+   Agents should work inside explicit boundaries and expected result shape.
 
-### Document layer
-The human-readable source and working layer.
-This is where source documents, markdown knowledge files, standards, project notes, handoff notes, and residue notes can naturally live.
+4. **Center the verification ledger**
+   Writeback must preserve checks, ambiguity, and residue, not just conclusions.
 
-### Context layer
-The system layer that turns saved material into durable working context.
-This is where identity, linking, retrieval structure, context packs, decision context, and write-back pathways should live.
+5. **Center compounding**
+   Every meaningful run should make the next run stronger.
 
-The document layer preserves source truth in a readable form.
-The context layer makes that material callable, connected, and reusable for work.
+## What Livebase Is Not
 
-Both are necessary.
+`Livebase` is not:
 
-## Core loop
+- a chat transcript archive
+- a personal wiki replacement
+- an everything platform for agents
+- a place to dump every model thought
+- a product whose value comes from naming many features
 
-The strongest way to understand the project is through its loop:
+## Core Loop
 
-# prepare → act → verify → write back → strengthen
+```text
+capture stable knowledge
+-> checkpoint task runtime
+-> resume from the primary evidence gap
+-> generate an execution contract
+-> perform work
+-> write back a verification ledger
+-> persist the smallest durable residue
+-> sharpen the next run
+```
 
-That means:
-- prepare the right working context
-- act through an execution environment or adapter
-- verify with evidence
-- write back the smallest durable residue that matters
-- make the next run stronger
+## v0.1 Scope
 
-## What this means in practice
+`v0.1` should prove one hard path end to end.
 
-Livebase is the layer between:
-- captured material
-- active work
-- future reuse
+### Must include
 
-It should turn saved material into something closer to a durable working base for:
-- research threads
-- project continuity
-- hiring/review/screening decisions
-- agent handoff
-- iterative execution
-- post-work compounding
+- local-first store
+- source ingestion
+- project container
+- first-class evidence gaps
+- checkpoints
+- resume packs
+- execution contracts
+- verification-ledger writeback
+- residue persistence
+- CLI-first product surface
 
-## Relationship to execution adapters
+### Must not include
 
-`Livebase` should not perform every action itself.
-It should be able to call execution adapters.
+- multi-device sync
+- vector search
+- heavy UI
+- large adapter ecosystem
+- generalized workflow engine
+- enterprise permission systems
 
-That means:
-- `Livebase` prepares working context
-- adapters execute in concrete environments
-- completed work writes back durable residue and updated context quality
+## Success Criteria
 
-For example, `grasp` should be understood as a browser execution adapter used by `Livebase`, not as a co-equal center.
+`v0.1` succeeds if a fresh run can:
 
-## v0.1 scope
+1. recover a real task
+2. identify the primary unresolved evidence gap
+3. produce one bounded execution contract
+4. accept one verification ledger with evidence-backed checks
+5. persist durable residue
+6. make the next resume smaller and sharper
 
-`v0.1` should focus on a real local core, not a platform fantasy.
+## Product Direction
 
-### v0.1 should include
-- local-first storage
-- source-preserving ingestion
-- lightweight structured layer on top of documents and notes
-- search + connection + context-pack generation
-- write-back path for durable residue
-- human/agent shared thread continuity
-- support for preserving decision context, not just document context
-- explicit room for document layer + context layer + future execution adapters
+The final product should feel like one installable `livebase` tool.
 
-### v0.1 should not include
-- enterprise multi-tenant architecture
-- heavy permissions systems
-- giant workflow engine
-- cloud-first dependency as the default identity
-- chat-first AI shell experience
-- mandatory up-front ontology modeling
-- broad platform ambition before one task loop is truly strong
+Internally, it can grow as:
 
-## Why this can become a real work
+- core continuity engine
+- CLI surface
+- MCP surface
+- host-agent skill surface
 
-Many tools help with one slice of knowledge work:
-- capture
-- note-taking
-- linking
-- search
-- AI Q&A
-- visualization
+But the user should experience one thing:
 
-But far fewer solve this sharper problem:
-
-# how do you make recurring real tasks continue from stronger working context instead of repeatedly paying restart cost?
-
-That is the opening.
-
-## Boundary against adjacent products
-
-This project is not trying to beat Notion at page management, Obsidian at plugin freedom, or NotebookLM at hosted source chat.
-
-It is trying to solve a different and sharper problem:
-
-# making recurring human-agent work continue from durable local working context instead of starting over again
+> a local system that lets interrupted work continue without starting over

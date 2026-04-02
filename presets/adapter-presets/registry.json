@@ -1,0 +1,126 @@
+{
+  "version": "0.1.0",
+  "presets": [
+    {
+      "id": "codex",
+      "host": "codex",
+      "adapter": "codex",
+      "source": "presets/adapter-presets/codex.prompt.md",
+      "dist": {
+        "text": "presets/adapter-presets/dist/codex.txt"
+      },
+      "tools": [
+        "livebase.task.resume",
+        "livebase.task.contract",
+        "livebase.task.writeback",
+        "livebase.task.checkpoint",
+        "livebase.task.resolve_gap"
+      ],
+      "placeholders": [
+        "EXTRA_RULES"
+      ],
+      "loader": {
+        "resume": {
+          "includeRegister": true
+        },
+        "register": {
+          "source": "continuationRegister.promptBlock",
+          "position": "top_of_attention",
+          "policy": "if_present",
+          "conflictResolution": "fresh_resume_wins"
+        }
+      }
+    },
+    {
+      "id": "claude-code",
+      "host": "claude-code",
+      "adapter": "claude-code",
+      "source": "presets/adapter-presets/claude-code.prompt.md",
+      "dist": {
+        "text": "presets/adapter-presets/dist/claude-code.txt"
+      },
+      "tools": [
+        "livebase.task.resume",
+        "livebase.task.contract",
+        "livebase.task.writeback",
+        "livebase.task.checkpoint",
+        "livebase.task.resolve_gap"
+      ],
+      "placeholders": [
+        "EXTRA_RULES"
+      ],
+      "loader": {
+        "resume": {
+          "includeRegister": true
+        },
+        "register": {
+          "source": "continuationRegister.promptBlock",
+          "position": "top_of_attention",
+          "policy": "if_present",
+          "conflictResolution": "fresh_resume_wins"
+        }
+      }
+    },
+    {
+      "id": "openai-responses-host",
+      "host": "openai-responses-host",
+      "adapter": "openai-responses-host",
+      "source": "presets/adapter-presets/openai-responses-host.prompt.md",
+      "dist": {
+        "text": "presets/adapter-presets/dist/openai-responses-host.txt"
+      },
+      "tools": [
+        "livebase.task.resume",
+        "livebase.task.contract",
+        "livebase.task.writeback",
+        "livebase.task.checkpoint",
+        "livebase.task.resolve_gap"
+      ],
+      "placeholders": [
+        "EXTRA_RULES"
+      ],
+      "loader": {
+        "resume": {
+          "includeRegister": true
+        },
+        "register": {
+          "source": "continuationRegister.promptBlock",
+          "position": "top_of_attention",
+          "policy": "if_present",
+          "conflictResolution": "fresh_resume_wins"
+        }
+      }
+    },
+    {
+      "id": "orchestrator",
+      "host": "orchestrator",
+      "adapter": "orchestrator",
+      "source": "presets/adapter-presets/orchestrator.prompt.md",
+      "dist": {
+        "text": "presets/adapter-presets/dist/orchestrator.txt"
+      },
+      "tools": [
+        "livebase.task.resume",
+        "livebase.task.contract",
+        "livebase.task.writeback",
+        "livebase.task.checkpoint",
+        "livebase.task.resolve_gap"
+      ],
+      "placeholders": [
+        "EXTRA_RULES",
+        "WORKER_ROLE"
+      ],
+      "loader": {
+        "resume": {
+          "includeRegister": true
+        },
+        "register": {
+          "source": "continuationRegister.promptBlock",
+          "position": "top_of_attention",
+          "policy": "if_present",
+          "conflictResolution": "fresh_resume_wins"
+        }
+      }
+    }
+  ]
+}

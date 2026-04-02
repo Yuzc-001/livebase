@@ -9,6 +9,8 @@ result_zhangsan.json
 store/sources/*.json
 store/notes/*.json
 store/projects/*.json
-store/entities/*.json
 store/residue/*.json
+store/tasks/*.json
+store/contracts/*.json
+store/ledgers/*.json
 store/context-packs/*.json

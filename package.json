@@ -1,18 +1,29 @@
 {
   "name": "livebase",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "type": "module",
+  "bin": {
+    "livebase": "./bin/livebase",
+    "livebase-mcp": "./bin/livebase-mcp"
+  },
   "scripts": {
-    "init": "bun scripts/init.ts",
-    "ingest": "bun scripts/ingest.ts",
-    "retrieve": "bun scripts/retrieve.ts",
-    "pack": "bun scripts/pack.ts",
-    "writeback": "bun scripts/writeback.ts",
-    "project": "bun scripts/project.ts",
+    "setup": "bun src/cli/main.ts setup",
+    "doctor": "bun src/cli/main.ts doctor",
+    "preset": "bun src/cli/main.ts preset",
+    "project": "bun src/cli/main.ts project",
+    "source": "bun src/cli/main.ts source",
+    "task": "bun src/cli/main.ts task",
+    "checkpoint": "bun src/cli/main.ts checkpoint",
+    "resume": "bun src/cli/main.ts resume",
+    "contract": "bun src/cli/main.ts contract",
+    "writeback": "bun src/cli/main.ts writeback",
+    "mcp": "bun src/mcp/server.ts",
+    "presets:build": "bun src/presets/build.ts",
     "test": "bun test"
   },
   "dependencies": {
-    "zod": "^3.23.8"
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "bun-types": "latest"
